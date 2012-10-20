@@ -28,8 +28,6 @@ fi
 #Firefox/Chrome/Safari
 #Windows Version
 #Macintosh
-#ApplicationID
-
 
 COL_CHAR=$(echo -e "\033")
 sed -e \
@@ -41,7 +39,6 @@ sed -e \
   's/\(\(Chrome\|Firefox\|Safari\)[^ ";]\+\)/'${COL_CHAR}'[0;31m\1'${COL_CHAR}'[0m/g' -e \
   's/\(Windows [^";\)]\+\)/'${COL_CHAR}'[1;33m\1'${COL_CHAR}'[0m/' -e \
   's/\(Macintosh\)/'${COL_CHAR}'[1;33m\1'${COL_CHAR}'[0m/' -e \
-  's/\([0-9]\{5\}-[0-9]\{7\}\)/'${COL_CHAR}'[1;37m\1'${COL_CHAR}'[0m/' \
   ${EXTRA_SED}
 
 
